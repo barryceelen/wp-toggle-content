@@ -1,0 +1,8 @@
+i.mce-i-togglecontent:before {
+	font: normal 20px/1 dashicons;
+    vertical-align: top;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f156";
+}
