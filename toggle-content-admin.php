@@ -22,6 +22,13 @@ function toggle_content_tinymce_plugin( $external_plugins ) {
 	return $external_plugins;
 }
 
+/**
+ * Add inline script to admin footer.
+ *
+ * Used to provide variables for the editor plugin.
+ *
+ * @since 1.0.0
+ */
 function toggle_content_vars() {
 	printf(
 		'<script type="text/javascript">var toggleContentVars = {tooltip:"%s"}</script>',
