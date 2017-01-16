@@ -50,10 +50,10 @@ function toggle_content_load_textdomain() {
 
 if ( is_admin() ) {
 
-    require_once( 'toggle-content-admin.php' );
+	require_once( 'toggle-content-admin.php' );
 
-    add_filter( 'mce_external_plugins', 'toggle_content_tinymce_plugin' );
-    add_filter( 'mce_buttons', 'toggle_content_tinymce_button', 10, 2 );
+	add_filter( 'mce_external_plugins', 'toggle_content_tinymce_plugin' );
+	add_filter( 'mce_buttons', 'toggle_content_tinymce_button', 10, 2 );
 	add_action( 'admin_init', 'toggle_content_editor_style' );
 	add_action( 'admin_enqueue_scripts', 'toggle_content_enqueue_styles' );
 	add_action( 'admin_print_scripts', 'toggle_content_vars' );
