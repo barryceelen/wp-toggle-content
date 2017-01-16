@@ -32,6 +32,22 @@ defined( 'ABSPATH' ) or die();
 define( 'TOGGLE_TEXT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'TOGGLE_TEXT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
+add_action( 'init', 'toggle_content_load_textdomain' );
+
+/**
+ * Load plugin textdomain.
+ *
+ * @since 1.0.0
+ */
+function toggle_content_load_textdomain() {
+
+	if ( false !== strpos( __FILE__, basename( WPMU_PLUGIN_DIR ) ) ) {
+		load_muplugin_textdomain( 'toggle-content', dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	} else {
+		load_plugin_textdomain( 'toggle-content', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+}
+
 if ( is_admin() ) {
 
     require_once( 'toggle-content-admin.php' );
