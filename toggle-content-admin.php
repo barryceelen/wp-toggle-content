@@ -14,7 +14,7 @@
  *
  * @since 1.0.0
  * @param array $external_plugins An array of external TinyMCE plugins.
- * @return [type] [description]
+ * @return array Modified array of external TinyMCE plugins.
  */
 function toggle_content_tinymce_plugin( $external_plugins ) {
 
