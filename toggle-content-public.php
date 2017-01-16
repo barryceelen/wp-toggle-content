@@ -33,7 +33,7 @@ function toggle_content_enqueue_scripts() {
 			'labelExpand'     => esc_js( apply_filters( 'toggle_content_label_expand', __( 'Read More', 'toggle-content' ) ) ),
 			'className'       => apply_filters( 'toggle_content_element_class', 'toggle-content' ),
 			'classNameToggle' => apply_filters( 'toggle_content_toggle_class', 'toggle-content-toggle' ),
-			'labelExpand'     => esc_js( apply_filters( 'toggle_content_tooltip', __( 'Expand/Collapse Selection', 'toggle-content' ) ) ),
+			'tooltip'         => esc_js( apply_filters( 'toggle_content_tooltip', __( 'Expand/Collapse Selection', 'toggle-content' ) ) ),
 		)
 	);
 }
