@@ -14,7 +14,7 @@
  *
  * @since 1.0.0
  * @param array $external_plugins An array of external TinyMCE plugins.
- * @return [type] [description]
+ * @return array Modified array of external TinyMCE plugins.
  */
 function toggle_content_tinymce_plugin( $external_plugins ) {
 
@@ -22,8 +22,18 @@ function toggle_content_tinymce_plugin( $external_plugins ) {
 	return $external_plugins;
 }
 
+/**
+ * Add inline script to admin footer.
+ *
+ * Used to provide variables for the editor plugin.
+ *
+ * @since 1.0.0
+ */
 function toggle_content_vars() {
-	echo '<script type="text/javascript">var toggleContentVars = {tooltip:"' . esc_js( apply_filters( 'toggle_content_tooltip', __( 'Expand/Collapse Selection', 'toggle-content' ) ) ) . '"}</script>';
+	printf(
+		'<script type="text/javascript">var toggleContentVars = {tooltip:"%s"}</script>',
+		esc_js( apply_filters( 'toggle_content_tooltip', __( 'Expand/Collapse Selection', 'toggle-content' ) ) )
+	);
 }
 
 /**
