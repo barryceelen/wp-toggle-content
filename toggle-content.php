@@ -14,7 +14,7 @@
  * Version:           1.0.0
  * Author:            Barry Ceelen
  * Author URI:        https://github.com/barryceelen
- * Text Domain:       togglecontent
+ * Text Domain:       toggle-content
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path:       /languages
